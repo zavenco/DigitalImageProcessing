@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.zaven.digitalimageprocessing">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.DipActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ProcessingOptionsActivity"
+            android:label="@string/title_activity_processing_options"
+            android:parentActivityName=".activities.DipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.zaven.digitalimageprocessing.activities.DipActivity" />
+        </activity>
+        <activity
+            android:name=".activities.HistogramActivity"
+            android:label="@string/title_activity_histogram"
+            android:parentActivityName=".activities.ProcessingOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.zaven.digitalimageprocessing.activities.ProcessingOptionsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.DetectEdgesActivity"
+            android:label="@string/title_activity_detect_edges"
+            android:parentActivityName=".activities.ProcessingOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.zaven.digitalimageprocessing.activities.ProcessingOptionsActivity" />
+        </activity>
+        <activity
+            android:name=".activities.DetectLightActivity"
+            android:label="@string/title_activity_detect_light"
+            android:parentActivityName=".activities.ProcessingOptionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.zaven.digitalimageprocessing.activities.ProcessingOptionsActivity" />
+        </activity>
+    </application>
+
+</manifest>
