@@ -29,9 +29,9 @@ public class ProcessingOptionsActivity extends BaseActivity {
         ActivityHelper.setupToolbar(this, toolbar);
 
         Uri uri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
-                getResources().getResourcePackageName(R.drawable.outdoors) + '/' +
-                getResources().getResourceTypeName(R.drawable.outdoors) + '/' +
-                getResources().getResourceEntryName(R.drawable.outdoors) );
+                getResources().getResourcePackageName(R.drawable.sun_mountain) + '/' +
+                getResources().getResourceTypeName(R.drawable.sun_mountain) + '/' +
+                getResources().getResourceEntryName(R.drawable.sun_mountain) );
 
         bundle = new Bundle();
         bundle.putParcelable(KEY_BITMAP, uri);

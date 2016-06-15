@@ -52,7 +52,7 @@ public class DipActivity extends BaseActivity {
         setSupportActionBar(toolbar);
         requestPermission();
 
-        Glide.with(this).load(R.drawable.outdoors).into(sampleImage);
+        Glide.with(this).load(R.drawable.sun_mountain).into(sampleImage);
 
     }
 
